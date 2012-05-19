@@ -49,13 +49,14 @@ function flatten($array, $index_name = null, $return = array(), $original_array 
 				$line .= isset($line) ? $delimeter . $array_index : $array_index;
 				
 				if (in_array($array_index, array_keys($new_array))) {
-					if (isset($new_array[$array_index]))
+					if (isset($new_array[$array_index])) {
 						$new_array = $new_array[$array_index];
+					}
 				} else {
-				break;
+					break;
+				}
 			}
-		}
-		$return[$line] = isset($new_array) && !is_array($new_array) ? $new_array : null;
+			$return[$line] = isset($new_array) && !is_array($new_array) ? $new_array : null;
 		}
 	}
 	return $return;
