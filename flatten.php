@@ -1,7 +1,7 @@
 <?php
 
 /**
-* Flatten an associative array into an array with indeces that are combinations of indeces of the original array separated by a delimeter, especially useful for json_encoded objects
+* Flatten an associative array into an array with indices that are combinations of indices of the original array separated by a delimeter, especially useful for json_encoded objects
 *
 * example: array(
 *		'person' => array(
