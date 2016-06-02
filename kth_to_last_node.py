@@ -1,10 +1,10 @@
-def kth_to_last_node(k, node, count=0):
+def kth_to_last_node(k, node):
     """
     Find the k-th to last node in a linked list
     """
     def go(k, node, acc):
         if not node.next:
-            return (node, 1)
+            return (node, acc)
         else:
             (n, acc) = go(k, node.next, acc)
 
@@ -14,4 +14,4 @@ def kth_to_last_node(k, node, count=0):
             else:
                 return (n, acc)
 
-    return go(k, node, 0)[0]
+    return go(k, node, 1)[0]
