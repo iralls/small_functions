@@ -1,6 +1,9 @@
 def filter_by_percentage(p):
     """
     Stupid simple filter by random number
+    
+    :param p: float < 1
+    :return: boolean
     """
     import random
 
